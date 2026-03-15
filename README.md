@@ -2,13 +2,13 @@
 
 Machine learning pipeline to predict startup success using Crunchbase, AngelList, and PitchBook-style data.
 
-<!-- ...existing code... -->
+
 ## CI Status
 [![CI](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml/badge.svg)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/admossie/Predicting-Startup-Success-Using-ML)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/commits/main)
-<!-- ...existing code... -->
+
 
 ## Prerequisites
 - Python 3.9+
@@ -77,15 +77,18 @@ This generates:
 
 ## Model Performance
 
-| Metric | Validation | Test |
-|---|---:|---:|
-| Accuracy | TBD | TBD |
-| Precision | TBD | TBD |
-| Recall | TBD | TBD |
-| F1-score | TBD | TBD |
-| ROC-AUC | TBD | TBD |
+_Best model: **ExtraTrees**_
 
-> Replace TBD with real metrics from `reports/model_selection_report.md` after training.
+| Metric | Validation (CV Mean) | Test |
+|---|---:|---:|
+| Accuracy | 0.9083 | 1.0000 |
+| Precision | N/A | 1.0000 |
+| Recall | N/A | 1.0000 |
+| F1-score | 0.7000 | 1.0000 |
+| ROC-AUC | 1.0000 | 1.0000 |
+
+> Source: `reports/model_selection_leaderboard.csv` (ExtraTrees row: `cv_*_mean` for validation and `test_*` for test).
+
 
 ## Tests
 ```powershell
