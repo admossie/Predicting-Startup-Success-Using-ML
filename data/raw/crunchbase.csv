@@ -1,0 +1,11 @@
+startup_id,startup_name,founded_year,industry,country,funding_rounds,total_funding_usd,last_funding_stage,employees
+S001,AlphaAI,2018,AI,USA,3,4500000,Series A,45
+S002,FinCore,2016,FinTech,USA,4,12000000,Series B,120
+S003,HealthBridge,2019,HealthTech,UK,2,1800000,Seed,30
+S004,GreenGrid,2015,CleanTech,Germany,5,22000000,Series C,200
+S005,ShopPilot,2020,Ecommerce,India,1,600000,Pre-Seed,18
+S006,CloudOrbit,2017,SaaS,USA,3,7500000,Series A,85
+S007,AgriNova,2014,AgriTech,Brazil,4,9500000,Series B,140
+S008,CyberNest,2018,Cybersecurity,Israel,2,3200000,Seed,55
+S009,EdSpark,2021,EdTech,Canada,1,500000,Pre-Seed,12
+S010,LogiFlow,2016,Logistics,Singapore,3,6800000,Series A,75

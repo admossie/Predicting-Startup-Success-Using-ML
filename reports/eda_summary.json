@@ -1,0 +1,162 @@
+{
+  "original_shape": [
+    10,
+    20
+  ],
+  "cleaned_shape": [
+    10,
+    27
+  ],
+  "duplicates_removed": 0,
+  "missing_before": {
+    "startup_id": 0,
+    "startup_name": 0,
+    "founded_year": 0,
+    "industry": 0,
+    "country": 0,
+    "funding_rounds": 0,
+    "total_funding_usd": 0,
+    "last_funding_stage": 0,
+    "employees": 0,
+    "team_size": 0,
+    "followers": 0,
+    "job_openings": 0,
+    "remote_friendly": 0,
+    "monthly_web_visits": 0,
+    "investor_count": 0,
+    "latest_valuation_usd": 0,
+    "has_exit": 0,
+    "exit_type": 7,
+    "years_to_exit": 7,
+    "startup_age_years": 0
+  },
+  "missing_after": {
+    "startup_id": 0,
+    "startup_name": 0,
+    "founded_year": 0,
+    "industry": 0,
+    "country": 0,
+    "funding_rounds": 0,
+    "total_funding_usd": 0,
+    "last_funding_stage": 0,
+    "employees": 0,
+    "team_size": 0,
+    "followers": 0,
+    "job_openings": 0,
+    "remote_friendly": 0,
+    "monthly_web_visits": 0,
+    "investor_count": 0,
+    "latest_valuation_usd": 0,
+    "has_exit": 0,
+    "exit_type": 0,
+    "years_to_exit": 0,
+    "startup_age_years": 0,
+    "years_to_exit_missing_flag": 0,
+    "exit_type_missing_flag": 0,
+    "funding_stage_rank": 0,
+    "log1p_total_funding_usd": 0,
+    "log1p_latest_valuation_usd": 0,
+    "log1p_monthly_web_visits": 0,
+    "log1p_followers": 0
+  },
+  "outlier_report": {
+    "total_funding_usd": {
+      "q1": 2150000.0,
+      "q3": 9000000.0,
+      "lower_bound": -8125000.0,
+      "upper_bound": 19275000.0,
+      "outliers_before": 1,
+      "outliers_after": 0
+    },
+    "employees": {
+      "q1": 33.75,
+      "q3": 111.25,
+      "lower_bound": -82.5,
+      "upper_bound": 227.5,
+      "outliers_before": 0,
+      "outliers_after": 0
+    },
+    "team_size": {
+      "q1": 31.5,
+      "q3": 106.25,
+      "lower_bound": -80.625,
+      "upper_bound": 218.375,
+      "outliers_before": 0,
+      "outliers_after": 0
+    },
+    "followers": {
+      "q1": 3450.0,
+      "q3": 5550.0,
+      "lower_bound": 300.0,
+      "upper_bound": 8700.0,
+      "outliers_before": 0,
+      "outliers_after": 0
+    },
+    "job_openings": {
+      "q1": 4.0,
+      "q3": 6.75,
+      "lower_bound": -0.125,
+      "upper_bound": 10.875,
+      "outliers_before": 1,
+      "outliers_after": 0
+    },
+    "monthly_web_visits": {
+      "q1": 25750.0,
+      "q3": 48500.0,
+      "lower_bound": -8375.0,
+      "upper_bound": 82625.0,
+      "outliers_before": 0,
+      "outliers_after": 0
+    },
+    "investor_count": {
+      "q1": 5.75,
+      "q3": 12.5,
+      "lower_bound": -4.375,
+      "upper_bound": 22.625,
+      "outliers_before": 0,
+      "outliers_after": 0
+    },
+    "latest_valuation_usd": {
+      "q1": 25250000.0,
+      "q3": 92500000.0,
+      "lower_bound": -75625000.0,
+      "upper_bound": 193375000.0,
+      "outliers_before": 1,
+      "outliers_after": 0
+    },
+    "years_to_exit": {
+      "q1": 0.0,
+      "q3": 5.25,
+      "lower_bound": -7.875,
+      "upper_bound": 13.125,
+      "outliers_before": 0,
+      "outliers_after": 0
+    }
+  },
+  "correlation_with_has_exit": {
+    "years_to_exit_missing_flag": -1.0,
+    "exit_type_missing_flag": -1.0,
+    "years_to_exit": 0.9926415482951334,
+    "team_size": 0.8718936765484673,
+    "employees": 0.8660415120757687,
+    "total_funding_usd": 0.8241898744222238,
+    "latest_valuation_usd": 0.8143708900282997,
+    "funding_stage_rank": 0.8036850414868042,
+    "funding_rounds": 0.803685041486804,
+    "investor_count": 0.7955312228279211,
+    "founded_year": -0.745643719201443,
+    "startup_age_years": 0.74564371920144,
+    "log1p_total_funding_usd": 0.6689856718838385,
+    "log1p_latest_valuation_usd": 0.6651455874755922,
+    "job_openings": 0.5659243011865128,
+    "remote_friendly": -0.5238095238095237,
+    "monthly_web_visits": 0.1774981643518849,
+    "log1p_monthly_web_visits": 0.13774214241758106,
+    "log1p_followers": 0.1298430169096734,
+    "followers": 0.06469870097181928
+  },
+  "cleaned_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_cleaned.csv",
+  "model_ready_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_model_ready.csv",
+  "baseline_ready_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_baseline_ready.csv",
+  "report_markdown": "C:\\Users\\Owner\\source\\my-new-project\\reports\\eda_report.md"
+}

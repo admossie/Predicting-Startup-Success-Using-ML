@@ -1,0 +1,11 @@
+startup_id,startup_name,actual_has_exit,predicted_probability_success,predicted_label
+S001,AlphaAI,0,0.003181818181818182,0
+S002,FinCore,1,0.9759448900772429,1
+S003,HealthBridge,0,0.01095959595959596,0
+S004,GreenGrid,1,0.9929983660130719,1
+S005,ShopPilot,0,0.0,0
+S006,CloudOrbit,0,0.024181818181818183,0
+S007,AgriNova,1,0.9887630718954249,1
+S008,CyberNest,0,0.02670959595959596,0
+S009,EdSpark,0,0.0,0
+S010,LogiFlow,0,0.033652406417112306,0

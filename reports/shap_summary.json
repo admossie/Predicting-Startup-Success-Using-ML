@@ -1,0 +1,64 @@
+{
+  "project": "Predicting Startup Success Using ML",
+  "model_name": "ExtraTrees",
+  "rows_explained": 10,
+  "features_explained": 40,
+  "expected_value": "[0.5 0.5]",
+  "top_global_features": [
+    {
+      "feature": "funding_stage_rank",
+      "mean_abs_shap": 0.05283876958190684,
+      "mean_signed_shap": -0.024501397966594056
+    },
+    {
+      "feature": "employees",
+      "mean_abs_shap": 0.04905198745899211,
+      "mean_signed_shap": -0.018484305553694107
+    },
+    {
+      "feature": "last_funding_stage_Series B",
+      "mean_abs_shap": 0.041852603045103055,
+      "mean_signed_shap": -0.015381972194472201
+    },
+    {
+      "feature": "funding_rounds",
+      "mean_abs_shap": 0.041212444938102846,
+      "mean_signed_shap": -0.01970400907571962
+    },
+    {
+      "feature": "team_size",
+      "mean_abs_shap": 0.037648958972218774,
+      "mean_signed_shap": -0.015107043746921206
+    },
+    {
+      "feature": "total_funding_usd",
+      "mean_abs_shap": 0.037088267255811116,
+      "mean_signed_shap": -0.014165024316260141
+    },
+    {
+      "feature": "startup_age_years",
+      "mean_abs_shap": 0.0358330729282948,
+      "mean_signed_shap": -0.014618623700192332
+    },
+    {
+      "feature": "latest_valuation_usd",
+      "mean_abs_shap": 0.031222643215535372,
+      "mean_signed_shap": -0.011314783101792918
+    },
+    {
+      "feature": "log1p_total_funding_usd",
+      "mean_abs_shap": 0.02516351250601251,
+      "mean_signed_shap": -0.009031781132810553
+    },
+    {
+      "feature": "last_funding_stage_Series A",
+      "mean_abs_shap": 0.02282363249925169,
+      "mean_signed_shap": -0.004582749878260724
+    }
+  ],
+  "global_csv": "C:\\Users\\Owner\\source\\my-new-project\\reports\\shap_feature_importance.csv",
+  "local_csv": "C:\\Users\\Owner\\source\\my-new-project\\reports\\shap_local_explanations.csv",
+  "bar_plot": "C:\\Users\\Owner\\source\\my-new-project\\reports\\shap_summary_bar.png",
+  "beeswarm_plot": "C:\\Users\\Owner\\source\\my-new-project\\reports\\shap_summary_beeswarm.png",
+  "summary_md": "C:\\Users\\Owner\\source\\my-new-project\\reports\\shap_report.md"
+}

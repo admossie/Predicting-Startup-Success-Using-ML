@@ -1,0 +1,4 @@
+startup_id,startup_name,predicted_probability_success,predicted_label
+N001,QuantumLeaf,0.02095959595959596,0
+N002,RoboLedger,0.09018181818181818,0
+N003,SolarMesh,0.9431801841948899,1

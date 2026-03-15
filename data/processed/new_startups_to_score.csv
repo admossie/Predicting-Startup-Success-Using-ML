@@ -1,0 +1,4 @@
+startup_id,startup_name,founded_year,funding_rounds,total_funding_usd,last_funding_stage,employees,team_size,followers,job_openings,remote_friendly,monthly_web_visits,investor_count,latest_valuation_usd,industry,country
+N001,QuantumLeaf,2019,2,2400000,Seed,28,25,3100,4,1,26000,6,18000000,HealthTech,UK
+N002,RoboLedger,2017,3,8200000,Series A,72,68,5200,6,1,43000,10,76000000,FinTech,USA
+N003,SolarMesh,2015,4,14000000,Series B,130,120,4100,5,0,29000,14,110000000,CleanTech,Germany

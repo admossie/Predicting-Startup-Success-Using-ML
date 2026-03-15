@@ -1,0 +1,11 @@
+startup_id,startup_name,team_size,followers,job_openings,remote_friendly,monthly_web_visits
+S001,AlphaAI,42,7800,5,1,52000
+S002,FinCore,115,6200,12,1,73000
+S003,HealthBridge,28,3900,4,1,31000
+S004,GreenGrid,185,4500,8,0,28000
+S005,ShopPilot,16,2600,3,1,19000
+S006,CloudOrbit,80,5100,6,1,47000
+S007,AgriNova,132,3300,4,0,25000
+S008,CyberNest,50,5700,7,1,49000
+S009,EdSpark,10,1800,2,1,14000
+S010,LogiFlow,70,4100,5,0,36000

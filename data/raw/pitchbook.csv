@@ -1,0 +1,11 @@
+startup_id,startup_name,investor_count,latest_valuation_usd,has_exit,exit_type,years_to_exit
+S001,AlphaAI,8,35000000,0,,
+S002,FinCore,15,120000000,1,Acquisition,7
+S003,HealthBridge,5,22000000,0,,
+S004,GreenGrid,18,300000000,1,IPO,8
+S005,ShopPilot,3,7000000,0,,
+S006,CloudOrbit,11,85000000,0,,
+S007,AgriNova,13,95000000,1,Acquisition,9
+S008,CyberNest,9,40000000,0,,
+S009,EdSpark,2,5000000,0,,
+S010,LogiFlow,10,65000000,0,,
