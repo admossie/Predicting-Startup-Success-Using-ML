@@ -26,6 +26,8 @@ pip install -r requirements.txt
 - `run_shap_analysis.py` - SHAP explainability pipeline.
 
 ## Key Data Files
+> Dataset is synthetic/educational. Replace with real Crunchbase or AngelList data for production use.
+
 - `data/processed/startup_dataset.csv`
 - `data/processed/startup_dataset_cleaned.csv`
 - `data/processed/startup_dataset_baseline_ready.csv`
@@ -68,6 +70,18 @@ This generates:
 - Features at the top are generally the strongest drivers of success probability.
 - Use this with `reports/shap_local_explanations.csv` to explain individual startup predictions.
 
+## Model Performance
+
+| Metric | Validation | Test |
+|---|---:|---:|
+| Accuracy | TBD | TBD |
+| Precision | TBD | TBD |
+| Recall | TBD | TBD |
+| F1-score | TBD | TBD |
+| ROC-AUC | TBD | TBD |
+
+> Replace TBD with real metrics from `reports/model_selection_report.md` after training.
+
 ## Tests
 ```powershell
 pytest -q
@@ -85,6 +99,17 @@ pytest -q -m functional
 - New predictions: `reports/new_startup_predictions.csv`
 - Model selection report: `reports/model_selection_report.md`
 - SHAP report: `reports/shap_report.md`
+
+## Reproducibility Notes
+- Random seeds are fixed across all train/validation splits.
+- All model artifacts are saved in `models/`.
+- All experiment outputs are stored in `reports/`.
+- Avoid hardcoded local paths for portability.
+
+## Limitations
+- Current dataset is very small (~10 rows), so results are directional.
+- Performance and stability should improve with larger, higher-quality real-world data.
+- This project is for educational/research use unless validated at production scale.
 
 ## Project Conclusion
 - Built a full ML pipeline for startup success prediction: data integration, preparation, baseline models, tuning, selection, inference, and explainability.
