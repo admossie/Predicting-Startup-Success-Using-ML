@@ -5,12 +5,25 @@ Machine learning pipeline to predict startup success using Crunchbase, AngelList
 ## CI Status
 [![CI](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml/badge.svg)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml)
 
+## Prerequisites
+- Python 3.9+
+- pip
+- Git
+
+## Installation
+```powershell
+py -3.9 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
 ## Project Structure
 - `build_dataset.py` - merges source datasets into one unified table.
 - `prepare_data.py` - tidying, EDA, missing handling, outlier treatment, feature engineering.
 - `train_baseline.py` - baseline modeling with diagnostics.
 - `select_final_model.py` - multi-model tuning and final model selection.
 - `predict_startup.py` - inference script to score new startup records.
+- `run_shap_analysis.py` - SHAP explainability pipeline.
 
 ## Key Data Files
 - `data/processed/startup_dataset.csv`
@@ -20,20 +33,20 @@ Machine learning pipeline to predict startup success using Crunchbase, AngelList
 
 ## Run End-to-End
 ```bash
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe build_dataset.py
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe prepare_data.py
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe train_baseline.py
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe select_final_model.py
+python build_dataset.py
+python prepare_data.py
+python train_baseline.py
+python select_final_model.py
 ```
 
 ## Score New Startups
 ```bash
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe predict_startup.py --input data/processed/new_startups_to_score.csv --output reports/new_startup_predictions.csv
+python predict_startup.py --input data/processed/new_startups_to_score.csv --output reports/new_startup_predictions.csv
 ```
 
 ## SHAP Explainability
 ```bash
-C:/Users/Owner/AppData/Local/Programs/Python/Python39/python.exe run_shap_analysis.py
+python run_shap_analysis.py
 ```
 
 This generates:
@@ -55,6 +68,16 @@ This generates:
 - Features at the top are generally the strongest drivers of success probability.
 - Use this with `reports/shap_local_explanations.csv` to explain individual startup predictions.
 
+## Tests
+```powershell
+pytest -q
+```
+
+Run functional tests only:
+```powershell
+pytest -q -m functional
+```
+
 ## Outputs
 - Selected model: `models/final_model.joblib`
 - Model metadata: `models/final_model_metadata.json`
@@ -69,3 +92,6 @@ This generates:
 - Most influential global drivers from SHAP include `funding_stage_rank`, `employees`, `funding_rounds`, `team_size`, and `total_funding_usd`.
 - Inference workflow is production-ready for CSV scoring via `predict_startup.py`.
 - Current dataset is very small (10 rows), so results are directional; model confidence should improve with larger real-world data.
+
+## License
+MIT © 2026 admossie
