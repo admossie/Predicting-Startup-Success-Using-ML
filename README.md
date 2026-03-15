@@ -2,8 +2,13 @@
 
 Machine learning pipeline to predict startup success using Crunchbase, AngelList, and PitchBook-style data.
 
+<!-- ...existing code... -->
 ## CI Status
 [![CI](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml/badge.svg)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/admossie/Predicting-Startup-Success-Using-ML)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/commits/main)
+<!-- ...existing code... -->
 
 ## Prerequisites
 - Python 3.9+
@@ -119,4 +124,4 @@ pytest -q -m functional
 - Current dataset is very small (10 rows), so results are directional; model confidence should improve with larger real-world data.
 
 ## License
-MIT © 2026 admossie
+[MIT](LICENSE) © 2026 admossie
