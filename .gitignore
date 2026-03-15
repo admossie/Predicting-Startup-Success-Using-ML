@@ -10,3 +10,7 @@ models/*.pkl
 reports/tmp/
 .env
 .vscode/
+.DS_Store
+Thumbs.db
+*.log
+.env.*
