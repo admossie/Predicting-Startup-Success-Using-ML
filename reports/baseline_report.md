@@ -1,7 +1,7 @@
 # Baseline Modeling Report
 
 ## Data
-- Input dataset: C:\Users\Owner\source\my-new-project\data\processed\startup_dataset_baseline_ready.csv
+- Input dataset: C:\Users\Owner\source\Predicting-Startup-Success-Using-ML\data\processed\startup_dataset_baseline_ready.csv
 - Rows: 10
 - Features used: 40
 - Target: has_exit

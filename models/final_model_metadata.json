@@ -53,6 +53,6 @@
   "train_rows": 10,
   "cv_folds": 2,
   "cv_repeats": 5,
-  "data_path": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_baseline_ready.csv",
-  "model_path": "C:\\Users\\Owner\\source\\my-new-project\\models\\final_model.joblib"
+  "data_path": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\data\\processed\\startup_dataset_baseline_ready.csv",
+  "model_path": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\models\\final_model.joblib"
 }

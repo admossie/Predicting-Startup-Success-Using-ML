@@ -155,8 +155,8 @@
     "log1p_followers": 0.1298430169096734,
     "followers": 0.06469870097181928
   },
-  "cleaned_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_cleaned.csv",
-  "model_ready_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_model_ready.csv",
-  "baseline_ready_dataset": "C:\\Users\\Owner\\source\\my-new-project\\data\\processed\\startup_dataset_baseline_ready.csv",
-  "report_markdown": "C:\\Users\\Owner\\source\\my-new-project\\reports\\eda_report.md"
+  "cleaned_dataset": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\data\\processed\\startup_dataset_cleaned.csv",
+  "model_ready_dataset": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\data\\processed\\startup_dataset_model_ready.csv",
+  "baseline_ready_dataset": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\data\\processed\\startup_dataset_baseline_ready.csv",
+  "report_markdown": "C:\\Users\\Owner\\source\\Predicting-Startup-Success-Using-ML\\reports\\eda_report.md"
 }

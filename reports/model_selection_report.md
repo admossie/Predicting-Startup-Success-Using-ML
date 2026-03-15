@@ -1,7 +1,7 @@
 # Predicting Startup Success Using ML - Final Model Selection Report
 
 ## Data
-- Input dataset: C:\Users\Owner\source\my-new-project\data\processed\startup_dataset_baseline_ready.csv
+- Input dataset: C:\Users\Owner\source\Predicting-Startup-Success-Using-ML\data\processed\startup_dataset_baseline_ready.csv
 - Rows: 10
 - Features: 40
 - Target: has_exit
@@ -53,6 +53,6 @@
 - CV F1: 0.7000
 - CV PR-AUC: 1.0000
 - Test F1: 1.0000
-- Saved model: C:\Users\Owner\source\my-new-project\models\final_model.joblib
-- Metadata: C:\Users\Owner\source\my-new-project\models\final_model_metadata.json
-- Predictions: C:\Users\Owner\source\my-new-project\reports\final_model_predictions.csv
+- Saved model: C:\Users\Owner\source\Predicting-Startup-Success-Using-ML\models\final_model.joblib
+- Metadata: C:\Users\Owner\source\Predicting-Startup-Success-Using-ML\models\final_model_metadata.json
+- Predictions: C:\Users\Owner\source\Predicting-Startup-Success-Using-ML\reports\final_model_predictions.csv
