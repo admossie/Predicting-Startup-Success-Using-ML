@@ -1,7 +1,6 @@
 # Predicting Startup Success Using ML
 
-Machine learning pipeline to predict startup success using Crunchbase, AngelList, and PitchBook-style data.
-
+Machine learning pipeline to predict startup success using Crunchbase, Wellfound (AngelList), and PitchBook-style data.
 
 ## CI Status
 [![CI](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml/badge.svg)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml)
@@ -9,13 +8,12 @@ Machine learning pipeline to predict startup success using Crunchbase, AngelList
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/admossie/Predicting-Startup-Success-Using-ML)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/commits/main)
 
-
 ## Prerequisites
 - Python 3.9+
 - pip
 - Git
 
-## Installation
+## Installation (Windows)
 ```powershell
 py -3.9 -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -23,16 +21,22 @@ pip install -r requirements.txt
 ```
 
 ## Project Structure
-- `build_dataset.py` - merges source datasets into one unified table.
-- `prepare_data.py` - tidying, EDA, missing handling, outlier treatment, feature engineering.
-- `train_baseline.py` - baseline modeling with diagnostics.
-- `select_final_model.py` - multi-model tuning and final model selection.
-- `predict_startup.py` - inference script to score new startup records.
-- `run_shap_analysis.py` - SHAP explainability pipeline.
+- `build_dataset.py` — Merge source datasets into one unified table.
+- `prepare_data.py` — Cleaning, EDA, missing-value handling, outlier treatment, feature engineering.
+- `train_baseline.py` — Baseline modeling and diagnostics.
+- `select_final_model.py` — Multi-model tuning and final model selection.
+- `predict_startup.py` — Score new startup records.
+- `run_shap_analysis.py` — SHAP explainability pipeline.
 
-## Key Data Files
-> Dataset is synthetic/educational. Replace with real Crunchbase or AngelList data for production use.
+## Dataset and Key Files
+> Dataset is synthetic/educational. Replace with real commercial data for production use.
 
+### Data source references
+- Crunchbase: https://www.crunchbase.com/
+- Wellfound (AngelList): https://wellfound.com/
+- PitchBook: https://pitchbook.com/
+
+### Processed files
 - `data/processed/startup_dataset.csv`
 - `data/processed/startup_dataset_cleaned.csv`
 - `data/processed/startup_dataset_baseline_ready.csv`
@@ -59,7 +63,7 @@ python run_shap_analysis.py
 This generates:
 - `reports/shap_feature_importance.csv` (global SHAP importance)
 - `reports/shap_local_explanations.csv` (row-level top contributors)
-- `reports/shap_report.md` (SHAP summary report)
+- `reports/shap_report.md` (summary report)
 
 ## SHAP Visuals
 ### Global Feature Importance (Bar)
@@ -68,12 +72,14 @@ This generates:
 ### Feature Impact Distribution (Beeswarm)
 ![SHAP Beeswarm Plot](reports/shap_summary_beeswarm.png)
 
-## How to Interpret SHAP Plots
-- Bar plot (`shap_summary_bar.png`): higher bar = more important feature overall (global impact).
-- Beeswarm plot (`shap_summary_beeswarm.png`): each dot is one startup; horizontal position shows whether the feature pushes prediction lower (left) or higher (right).
-- Dot color in beeswarm: low feature value (blue) to high feature value (red), which helps explain direction of effect.
-- Features at the top are generally the strongest drivers of success probability.
-- Use this with `reports/shap_local_explanations.csv` to explain individual startup predictions.
+### Sample Prediction Output (optional)
+![Prediction Output Preview](reports/new_startup_predictions_preview.png)
+
+## How to Interpret SHAP
+- **Bar plot**: higher bar means higher global importance.
+- **Beeswarm**: each dot is one startup; left lowers prediction, right raises prediction.
+- **Color**: blue = lower feature value, red = higher feature value.
+- Pair with `reports/shap_local_explanations.csv` for row-level explanations.
 
 ## Model Performance
 
@@ -87,8 +93,7 @@ _Best model: **ExtraTrees**_
 | F1-score | 0.7000 | 1.0000 |
 | ROC-AUC | 1.0000 | 1.0000 |
 
-> Source: `reports/model_selection_leaderboard.csv` (ExtraTrees row: `cv_*_mean` for validation and `test_*` for test).
-
+> Source: `reports/model_selection_leaderboard.csv` (ExtraTrees row; `cv_*_mean` for validation and `test_*` for test).
 
 ## Tests
 ```powershell
@@ -101,30 +106,31 @@ pytest -q -m functional
 ```
 
 ## Outputs
-- Selected model: `models/final_model.joblib`
-- Model metadata: `models/final_model_metadata.json`
-- Selection leaderboard: `reports/model_selection_leaderboard.csv`
-- New predictions: `reports/new_startup_predictions.csv`
-- Model selection report: `reports/model_selection_report.md`
-- SHAP report: `reports/shap_report.md`
+- `models/final_model.joblib`
+- `models/final_model_metadata.json`
+- `reports/model_selection_leaderboard.csv`
+- `reports/model_selection_report.md`
+- `reports/new_startup_predictions.csv`
+- `reports/shap_feature_importance.csv`
+- `reports/shap_local_explanations.csv`
+- `reports/shap_report.md`
 
 ## Reproducibility Notes
-- Random seeds are fixed across all train/validation splits.
-- All model artifacts are saved in `models/`.
-- All experiment outputs are stored in `reports/`.
-- Avoid hardcoded local paths for portability.
+- Random seeds fixed across train/validation splits.
+- Model artifacts are versioned in `models/`.
+- Reports are stored in `reports/`.
+- Use relative paths to keep scripts portable.
 
 ## Limitations
-- Current dataset is very small (~10 rows), so results are directional.
-- Performance and stability should improve with larger, higher-quality real-world data.
-- This project is for educational/research use unless validated at production scale.
+- Current dataset is very small (~10 rows); results are directional.
+- Performance should be re-validated on larger real-world data.
+- Educational/research scope unless production validation is completed.
 
-## Project Conclusion
-- Built a full ML pipeline for startup success prediction: data integration, preparation, baseline models, tuning, selection, inference, and explainability.
-- Final selected model: `ExtraTrees` (saved in `models/final_model.joblib`) using multi-model comparison with hyperparameter tuning.
-- Most influential global drivers from SHAP include `funding_stage_rank`, `employees`, `funding_rounds`, `team_size`, and `total_funding_usd`.
-- Inference workflow is production-ready for CSV scoring via `predict_startup.py`.
-- Current dataset is very small (10 rows), so results are directional; model confidence should improve with larger real-world data.
+## Conclusion
+- Built a full ML pipeline for startup success prediction.
+- Final selected model: `ExtraTrees`.
+- Top SHAP drivers include `funding_stage_rank`, `employees`, `funding_rounds`, `team_size`, and `total_funding_usd`.
+- Inference supports production-style CSV scoring.
 
 ## License
 [MIT](LICENSE) © 2026 admossie
