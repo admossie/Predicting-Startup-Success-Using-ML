@@ -2,6 +2,9 @@
 
 Machine learning pipeline to predict startup success using Crunchbase, AngelList, and PitchBook-style data.
 
+## CI Status
+[![CI](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml/badge.svg)](https://github.com/admossie/Predicting-Startup-Success-Using-ML/actions/workflows/ci.yml)
+
 ## Project Structure
 - `build_dataset.py` - merges source datasets into one unified table.
 - `prepare_data.py` - tidying, EDA, missing handling, outlier treatment, feature engineering.
